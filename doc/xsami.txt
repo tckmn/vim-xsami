@@ -1,0 +1,43 @@
+*xsami*  *xsami.txt*  automatic X-SAMPA to IPA translation
+
+Author:  KeyboardFire <andy@keyboardfire.com>
+License: GPLv3
+                                       _              ~
+                         __  _____  __ _ _ __ ___ (_) ~
+                         \ \/ / __|/ _` | '_ ` _ \| | ~
+                          >  <\__ \ (_| | | | | | | | ~
+                         /_/\_\___/\__,_|_| |_| |_|_| ~
+
+1. Overview                    |xsami-overview|
+2. Mappings                    |xsami-mappings|
+3. Configuration               |xsami-configuration|
+
+===============================================================================
+OVERVIEW                                                       *xsami-overview*
+
+xsami is a plugin that translates X-SAMPA text to IPA in real time.  For
+example, if a user enables xsami and then types `G`, the buffer becomes `ɣ`.
+Subsequently typing `\` results in `ɢ`, and adding `_<` results in `ʛ`.
+
+===============================================================================
+MAPPINGS                                                       *xsami-mappings*
+
+-------------------------------------------------------------------------------
+                    *xsami_<C-l>*
+<C-l>               Toggle xsami in insert mode.  By default, xsami has no
+                    effect and allows the user to type normally.  When the
+                    toggle key is pressed, xsami begins translating X-SAMPA to
+                    IPA.  Exiting insert mode automatically disables xsami
+                    (until toggled on again).
+
+===============================================================================
+CONFIGURATION                                             *xsami-configuration*
+
+-------------------------------------------------------------------------------
+                                                            *'g:xsami_trigger'*
+Default: '<C-l>'
+
+Specifies which key toggles X-SAMPA to IPA translation.  This should be
+specified in the same format as you would use for a |:map|.  For example: >
+    let g:xsami_trigger = '<C-j>'
+<
