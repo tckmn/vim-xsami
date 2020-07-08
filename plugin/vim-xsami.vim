@@ -69,6 +69,6 @@ augroup xsami
 augroup END
 
 imap <script> <expr> <Plug>xsami <SID>xsami()
-if !hasmapto('<Plug>Xsami')
+if !hasmapto('<Plug>xsami')
     execute 'imap <unique> ' . g:xsami_trigger . ' <Plug>xsami'
 endif
